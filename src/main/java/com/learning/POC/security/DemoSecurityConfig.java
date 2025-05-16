@@ -47,6 +47,8 @@ public class DemoSecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/api/v1/product").hasRole("MANAGER")
                         .requestMatchers(HttpMethod.PUT, "/api/v1/product/**").hasRole("MANAGER")
                         .requestMatchers(HttpMethod.DELETE, "/api/v1/product/**").hasRole("ADMIN")
+                        //uncomment this to access swagger-ui
+//                        .requestMatchers(HttpMethod.GET,"/**").hasRole("ADMIN")
         );
 
         //using HTTP Basic authentication here
